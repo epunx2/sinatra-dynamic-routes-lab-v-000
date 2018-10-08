@@ -18,9 +18,9 @@ class App < Sinatra::Base
     @new_phrase = ""
     x = 0
     while x < @number
-      @new_phrase += "#{@phrase}"
+      @new_phrase = @phrase + " " + @new_phrase
       x += 1
     end
-    @new_phrase
+    "#{@new_phrase}"
   end
 end
