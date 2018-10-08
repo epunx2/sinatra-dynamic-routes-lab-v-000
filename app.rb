@@ -23,4 +23,13 @@ class App < Sinatra::Base
     end
     "#{@new_phrase}"
   end
+
+  get '/say/:word1/:word2/:word3/:word4/:word5' do
+    @phrase = ""
+    params.each do |a|
+      @phrase = a + " " + @phrase
+    end
+    "#{@phrase}"
+  end
+  
 end
